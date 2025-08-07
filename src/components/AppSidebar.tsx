@@ -108,8 +108,67 @@ export function AppSidebar() {
     return routes;
   }, []);
 
-  // State untuk menyimpan menu yang terbuka (tidak bergantung pada pathname)
-  const [openItems, setOpenItems] = React.useState<string[]>([]);
+  // State untuk menyimpan menu yang terbuka
+  const [openItems, setOpenItems] = React.useState<string[]>(() => {
+    // Jika berada di halaman Dashboard ('/'), buka menu Main secara default
+    // Atau jika berada di halaman yang ada dalam submenu Main
+    const mainRoutes = [
+      "/",
+      "/main/my-wallet",
+      "/main/transfer",
+      "/main/transaction",
+      "/main/payment",
+      "/main/exchange",
+    ];
+    if (mainRoutes.includes(pathname)) {
+      return ["Main"];
+    }
+    return [];
+  });
+
+  // Update openItems ketika pathname berubah (reload/navigasi)
+  React.useEffect(() => {
+    const mainRoutes = [
+      "/",
+      "/main/my-wallet",
+      "/main/transfer",
+      "/main/transaction",
+      "/main/payment",
+      "/main/exchange",
+    ];
+    const featuresRoutes = [
+      "/features",
+      "/features/integrations",
+      "/features/automation",
+      "/features/ai-agent",
+      "/features/ai-models",
+    ];
+    const toolsRoutes = ["/tools", "/tools/settings", "/tools/help-center"];
+
+    setOpenItems((prev) => {
+      const newOpenItems = [...prev];
+
+      // Buka menu Main jika berada di route Main
+      if (mainRoutes.includes(pathname) && !newOpenItems.includes("Main")) {
+        newOpenItems.push("Main");
+      }
+
+      // Buka menu Features jika berada di route Features
+      if (
+        featuresRoutes.includes(pathname) &&
+        !newOpenItems.includes("Features")
+      ) {
+        newOpenItems.push("Features");
+      }
+
+      // Buka menu Tools jika berada di route Tools
+      if (toolsRoutes.includes(pathname) && !newOpenItems.includes("Tools")) {
+        newOpenItems.push("Tools");
+      }
+
+      return newOpenItems;
+    });
+  }, [pathname]);
 
   const toggleItem = (title: string) => {
     setOpenItems((prev) =>
