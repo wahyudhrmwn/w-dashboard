@@ -198,7 +198,7 @@ export function AppSidebar() {
       <SidebarHeader className="border-b px-6 py-4">
         <div className="flex items-center gap-3">
           <div className="flex size-8 items-center justify-center rounded-lg bg-gradient-elegant shadow-lg">
-            <div className="size-4 rounded bg-primary-foreground" />
+            <div className="text-primary-foreground text-sm font-medium">S</div>
           </div>
           <div className="flex flex-col">
             <span className="font-semibold text-sm">Snyzze Inc</span>
@@ -225,7 +225,7 @@ export function AppSidebar() {
                       <CollapsibleTrigger asChild>
                         <SidebarMenuButton
                           className={cn(
-                            "w-full justify-between hover-lift",
+                            "w-full justify-between hover-lift mb-3",
                             item.subItems.some((subItem) =>
                               isActiveRoute(subItem.href || "")
                             ) && "sidebar-menu-active font-medium"
