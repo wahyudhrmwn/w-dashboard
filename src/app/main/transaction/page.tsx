@@ -53,7 +53,7 @@ export default function TransactionPage() {
 
       {/* Stats Cards */}
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-        <Card>
+        <Card className="bg-gradient-card hover-lift border-border/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">
               Total Transaksi
@@ -68,7 +68,7 @@ export default function TransactionPage() {
           </CardContent>
         </Card>
 
-        <Card>
+        <Card className="bg-gradient-card hover-lift border-border/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">
               Volume Transaksi
@@ -83,7 +83,7 @@ export default function TransactionPage() {
           </CardContent>
         </Card>
 
-        <Card>
+        <Card className="bg-gradient-card hover-lift border-border/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">Berhasil</CardTitle>
             <TrendingUp className="h-4 w-4 text-green-500" />
@@ -96,7 +96,7 @@ export default function TransactionPage() {
           </CardContent>
         </Card>
 
-        <Card>
+        <Card className="bg-gradient-card hover-lift border-border/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">Gagal</CardTitle>
             <TrendingDown className="h-4 w-4 text-red-500" />
@@ -111,7 +111,7 @@ export default function TransactionPage() {
       </div>
 
       {/* Filters and Search */}
-      <Card>
+      <Card className="bg-gradient-card hover-lift border-border/50">
         <CardHeader>
           <div className="flex items-center justify-between">
             <div>

@@ -55,7 +55,7 @@ export default function SettingsPage() {
       <div className="grid gap-6 lg:grid-cols-4">
         {/* Settings Navigation */}
         <div className="lg:col-span-1">
-          <Card>
+          <Card className="bg-gradient-card hover-lift border-border/50">
             <CardHeader>
               <CardTitle className="text-lg">Kategori Pengaturan</CardTitle>
             </CardHeader>
@@ -91,7 +91,7 @@ export default function SettingsPage() {
         {/* Settings Content */}
         <div className="lg:col-span-3 space-y-6">
           {/* Profile Settings */}
-          <Card>
+          <Card className="bg-gradient-card hover-lift border-border/50">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <User className="h-5 w-5" />
@@ -157,7 +157,7 @@ export default function SettingsPage() {
           </Card>
 
           {/* Security Settings */}
-          <Card>
+          <Card className="bg-gradient-card hover-lift border-border/50">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <Shield className="h-5 w-5" />
@@ -267,7 +267,7 @@ export default function SettingsPage() {
           </Card>
 
           {/* Notification Settings */}
-          <Card>
+          <Card className="bg-gradient-card hover-lift border-border/50">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <Bell className="h-5 w-5" />
@@ -367,7 +367,7 @@ export default function SettingsPage() {
           </Card>
 
           {/* Payment Settings */}
-          <Card>
+          <Card className="bg-gradient-card hover-lift border-border/50">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <CreditCard className="h-5 w-5" />
@@ -433,7 +433,7 @@ export default function SettingsPage() {
           </Card>
 
           {/* API Keys */}
-          <Card>
+          <Card className="bg-gradient-card hover-lift border-border/50">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <Key className="h-5 w-5" />

@@ -54,7 +54,7 @@ export default function AIAgentPage() {
 
       {/* Stats Cards */}
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-        <Card>
+        <Card className="bg-gradient-card hover-lift border-border/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">Total Agents</CardTitle>
             <Bot className="h-4 w-4 text-muted-foreground" />
@@ -67,7 +67,7 @@ export default function AIAgentPage() {
           </CardContent>
         </Card>
 
-        <Card>
+        <Card className="bg-gradient-card hover-lift border-border/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">Aktif</CardTitle>
             <Zap className="h-4 w-4 text-green-500" />
@@ -80,7 +80,7 @@ export default function AIAgentPage() {
           </CardContent>
         </Card>
 
-        <Card>
+        <Card className="bg-gradient-card hover-lift border-border/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">
               Interaksi Hari Ini
@@ -95,7 +95,7 @@ export default function AIAgentPage() {
           </CardContent>
         </Card>
 
-        <Card>
+        <Card className="bg-gradient-card hover-lift border-border/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">Satisfaction</CardTitle>
             <BarChart3 className="h-4 w-4 text-green-500" />
@@ -111,7 +111,7 @@ export default function AIAgentPage() {
 
       {/* Agent Categories */}
       <div className="grid gap-4 md:grid-cols-3">
-        <Card className="hover:shadow-md transition-shadow cursor-pointer">
+        <Card className="bg-gradient-card hover-lift border-border/50 cursor-pointer">
           <CardContent className="flex items-center justify-between p-6">
             <div className="flex items-center space-x-3">
               <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg flex items-center justify-center">
@@ -130,7 +130,7 @@ export default function AIAgentPage() {
           </CardContent>
         </Card>
 
-        <Card className="hover:shadow-md transition-shadow cursor-pointer">
+        <Card className="bg-gradient-card hover-lift border-border/50 cursor-pointer">
           <CardContent className="flex items-center justify-between p-6">
             <div className="flex items-center space-x-3">
               <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-green-600 rounded-lg flex items-center justify-center">
@@ -149,7 +149,7 @@ export default function AIAgentPage() {
           </CardContent>
         </Card>
 
-        <Card className="hover:shadow-md transition-shadow cursor-pointer">
+        <Card className="bg-gradient-card hover-lift border-border/50 cursor-pointer">
           <CardContent className="flex items-center justify-between p-6">
             <div className="flex items-center space-x-3">
               <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-purple-600 rounded-lg flex items-center justify-center">
@@ -191,7 +191,7 @@ export default function AIAgentPage() {
       </div>
 
       {/* Active Agents */}
-      <Card>
+      <Card className="bg-gradient-card hover-lift border-border/50">
         <CardHeader>
           <CardTitle>AI Agents Aktif</CardTitle>
           <CardDescription>
@@ -380,7 +380,7 @@ export default function AIAgentPage() {
 
       {/* Performance Metrics */}
       <div className="grid gap-6 md:grid-cols-2">
-        <Card>
+        <Card className="bg-gradient-card hover-lift border-border/50">
           <CardHeader>
             <CardTitle>Performance Overview</CardTitle>
             <CardDescription>
@@ -444,7 +444,7 @@ export default function AIAgentPage() {
           </CardContent>
         </Card>
 
-        <Card>
+        <Card className="bg-gradient-card hover-lift border-border/50">
           <CardHeader>
             <CardTitle>Recent Activity</CardTitle>
             <CardDescription>Aktivitas terbaru dari AI agents</CardDescription>

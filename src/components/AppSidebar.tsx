@@ -19,6 +19,16 @@ import {
   DollarSign,
   User,
   HelpCircle,
+  LayoutDashboard,
+  ArrowRightLeft,
+  Receipt,
+  ArrowUpDown,
+  Sparkles,
+  Plug,
+  Workflow,
+  Bot,
+  Brain,
+  Wrench,
 } from "lucide-react";
 
 import {
@@ -48,31 +58,31 @@ import { cn } from "@/lib/utils";
 const platformItems = [
   {
     title: "Main",
-    icon: Play,
+    icon: LayoutDashboard,
     isActive: true,
     subItems: [
       { title: "Dashboard", icon: Home, href: "/" },
       { title: "My Wallet", icon: Wallet, href: "/main/my-wallet" },
-      { title: "Transfer", icon: User, href: "/main/transfer" },
-      { title: "Transaction", icon: CreditCard, href: "/main/transaction" },
+      { title: "Transfer", icon: ArrowRightLeft, href: "/main/transfer" },
+      { title: "Transaction", icon: Receipt, href: "/main/transaction" },
       { title: "Payment", icon: CreditCard, href: "/main/payment" },
-      { title: "Exchange", icon: DollarSign, href: "/main/exchange" },
+      { title: "Exchange", icon: ArrowUpDown, href: "/main/exchange" },
     ],
   },
   {
     title: "Features",
-    icon: Database,
+    icon: Sparkles,
     href: "/features",
     subItems: [
-      { title: "Integrations", icon: Database, href: "/features/integrations" },
-      { title: "Automation", icon: Database, href: "/features/automation" },
-      { title: "AI Agents", icon: Database, href: "/features/ai-agent" },
-      { title: "AI Models", icon: Database, href: "/features/ai-models" },
+      { title: "Integrations", icon: Plug, href: "/features/integrations" },
+      { title: "Automation", icon: Workflow, href: "/features/automation" },
+      { title: "AI Agents", icon: Bot, href: "/features/ai-agent" },
+      { title: "AI Models", icon: Brain, href: "/features/ai-models" },
     ],
   },
   {
     title: "Tools",
-    icon: BookOpen,
+    icon: Wrench,
     href: "/tools",
     subItems: [
       { title: "Settings", icon: Settings, href: "/tools/settings" },
@@ -184,14 +194,14 @@ export function AppSidebar() {
   };
 
   return (
-    <Sidebar className="border-r">
+    <Sidebar className="border-r bg-gradient-sidebar">
       <SidebarHeader className="border-b px-6 py-4">
         <div className="flex items-center gap-3">
-          <div className="flex size-8 items-center justify-center rounded-lg bg-black text-white">
-            <div className="size-4 rounded bg-white" />
+          <div className="flex size-8 items-center justify-center rounded-lg bg-gradient-elegant shadow-lg">
+            <div className="size-4 rounded bg-primary-foreground" />
           </div>
           <div className="flex flex-col">
-            <span className="font-semibold text-sm">Acme Inc</span>
+            <span className="font-semibold text-sm">Snyzze Inc</span>
             <span className="text-xs text-muted-foreground">Enterprise</span>
           </div>
           <MoreHorizontal className="ml-auto size-4 text-muted-foreground" />
@@ -215,10 +225,10 @@ export function AppSidebar() {
                       <CollapsibleTrigger asChild>
                         <SidebarMenuButton
                           className={cn(
-                            "w-full justify-between",
+                            "w-full justify-between hover-lift",
                             item.subItems.some((subItem) =>
                               isActiveRoute(subItem.href || "")
-                            ) && "bg-black text-white font-medium"
+                            ) && "sidebar-menu-active font-medium"
                           )}
                           isActive={item.subItems.some((subItem) =>
                             isActiveRoute(subItem.href || "")
@@ -243,8 +253,9 @@ export function AppSidebar() {
                                 asChild
                                 isActive={isActiveRoute(subItem.href || "")}
                                 className={cn(
+                                  "hover-lift",
                                   isActiveRoute(subItem.href || "") &&
-                                    "bg-black/25 text-white font-medium border-l-2 border-primary shadow-sm"
+                                    "sidebar-submenu-active font-medium shadow-sm"
                                 )}
                               >
                                 <Link
@@ -287,8 +298,10 @@ export function AppSidebar() {
 
       <SidebarFooter className="border-t px-6 py-4">
         <div className="flex items-center gap-3">
-          <div className="size-8 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center">
-            <span className="text-white text-sm font-medium">S</span>
+          <div className="size-8 rounded-full bg-gradient-elegant shadow-lg flex items-center justify-center">
+            <span className="text-primary-foreground text-sm font-medium">
+              S
+            </span>
           </div>
           <div className="flex flex-col flex-1">
             <span className="text-sm font-medium">shadcn</span>

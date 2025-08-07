@@ -54,7 +54,7 @@ export default function HelpCenterPage() {
       </div>
 
       {/* Search */}
-      <Card>
+      <Card className="bg-gradient-card hover-lift border-border/50">
         <CardContent className="pt-6">
           <div className="relative max-w-2xl mx-auto">
             <Search className="absolute left-4 top-3 h-5 w-5 text-muted-foreground" />
@@ -68,7 +68,7 @@ export default function HelpCenterPage() {
 
       {/* Quick Help Categories */}
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-        <Card className="hover:shadow-md transition-shadow cursor-pointer">
+        <Card className="bg-gradient-card hover-lift border-border/50 cursor-pointer">
           <CardContent className="flex flex-col items-center justify-center p-6 text-center">
             <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg flex items-center justify-center mb-3">
               <CreditCard className="h-6 w-6 text-white" />
@@ -80,7 +80,7 @@ export default function HelpCenterPage() {
           </CardContent>
         </Card>
 
-        <Card className="hover:shadow-md transition-shadow cursor-pointer">
+        <Card className="bg-gradient-card hover-lift border-border/50 cursor-pointer">
           <CardContent className="flex flex-col items-center justify-center p-6 text-center">
             <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-green-600 rounded-lg flex items-center justify-center mb-3">
               <User className="h-6 w-6 text-white" />
@@ -90,7 +90,7 @@ export default function HelpCenterPage() {
           </CardContent>
         </Card>
 
-        <Card className="hover:shadow-md transition-shadow cursor-pointer">
+        <Card className="bg-gradient-card hover-lift border-border/50 cursor-pointer">
           <CardContent className="flex flex-col items-center justify-center p-6 text-center">
             <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-purple-600 rounded-lg flex items-center justify-center mb-3">
               <Shield className="h-6 w-6 text-white" />
@@ -100,7 +100,7 @@ export default function HelpCenterPage() {
           </CardContent>
         </Card>
 
-        <Card className="hover:shadow-md transition-shadow cursor-pointer">
+        <Card className="bg-gradient-card hover-lift border-border/50 cursor-pointer">
           <CardContent className="flex flex-col items-center justify-center p-6 text-center">
             <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-orange-600 rounded-lg flex items-center justify-center mb-3">
               <Zap className="h-6 w-6 text-white" />
@@ -116,7 +116,7 @@ export default function HelpCenterPage() {
       <div className="grid gap-6 lg:grid-cols-3">
         {/* Popular Articles */}
         <div className="lg:col-span-2 space-y-6">
-          <Card>
+          <Card className="bg-gradient-card hover-lift border-border/50">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <BookOpen className="h-5 w-5" />
@@ -251,7 +251,7 @@ export default function HelpCenterPage() {
           </Card>
 
           {/* FAQ Section */}
-          <Card>
+          <Card className="bg-gradient-card hover-lift border-border/50">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <HelpCircle className="h-5 w-5" />
@@ -325,7 +325,7 @@ export default function HelpCenterPage() {
         {/* Contact & Support */}
         <div className="space-y-6">
           {/* Contact Options */}
-          <Card>
+          <Card className="bg-gradient-card hover-lift border-border/50">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <Headphones className="h-5 w-5" />
@@ -378,7 +378,7 @@ export default function HelpCenterPage() {
           </Card>
 
           {/* Status & Updates */}
-          <Card>
+          <Card className="bg-gradient-card hover-lift border-border/50">
             <CardHeader>
               <CardTitle>System Status</CardTitle>
               <CardDescription>Status operasional platform</CardDescription>
@@ -412,7 +412,7 @@ export default function HelpCenterPage() {
           </Card>
 
           {/* Recent Updates */}
-          <Card>
+          <Card className="bg-gradient-card hover-lift border-border/50">
             <CardHeader>
               <CardTitle>Recent Updates</CardTitle>
               <CardDescription>Update dan perbaikan terbaru</CardDescription>

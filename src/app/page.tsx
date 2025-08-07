@@ -28,8 +28,12 @@ export default function Home() {
           </p>
         </div>
         <div className="flex items-center space-x-2">
-          <Button variant="outline">Export</Button>
-          <Button>Tambah Transaksi</Button>
+          <Button variant="outline" className="hover-lift">
+            Export
+          </Button>
+          <Button className="bg-gradient-elegant hover:bg-gradient-elegant/90 hover-lift shadow-lg">
+            Tambah Transaksi
+          </Button>
         </div>
       </div>
 
@@ -39,7 +43,7 @@ export default function Home() {
         <div className="lg:col-span-2 space-y-6">
           {/* Metrics Cards */}
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-            <Card>
+            <Card className="bg-gradient-card hover-lift border-border/50">
               <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                 <CardTitle className="text-sm font-medium">
                   Total Revenue
@@ -65,7 +69,7 @@ export default function Home() {
               </CardContent>
             </Card>
 
-            <Card>
+            <Card className="bg-gradient-card hover-lift border-border/50">
               <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                 <CardTitle className="text-sm font-medium">New Users</CardTitle>
                 <svg
@@ -92,7 +96,7 @@ export default function Home() {
               </CardContent>
             </Card>
 
-            <Card>
+            <Card className="bg-gradient-card hover-lift border-border/50">
               <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                 <CardTitle className="text-sm font-medium">
                   Total Orders
@@ -121,7 +125,7 @@ export default function Home() {
           </div>
 
           {/* Chart Section */}
-          <Card>
+          <Card className="bg-gradient-card hover-lift border-border/50">
             <CardHeader>
               <CardTitle>Overview</CardTitle>
               <CardDescription>
@@ -138,7 +142,7 @@ export default function Home() {
           </Card>
 
           {/* Transactions Table */}
-          <Card>
+          <Card className="bg-gradient-card hover-lift border-border/50">
             <CardHeader>
               <CardTitle>Transaksi Terbaru</CardTitle>
               <CardDescription>
@@ -162,7 +166,7 @@ export default function Home() {
                     <TableCell className="font-medium">INV-12345672</TableCell>
                     <TableCell>
                       <div className="flex items-center space-x-3">
-                        <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-medium text-xs">
+                        <div className="w-8 h-8 bg-gradient-to-r from-primary to-primary/80 rounded-full flex items-center justify-center text-primary-foreground font-medium text-xs">
                           SH
                         </div>
                         <span>Samirah Hakim</span>
@@ -183,7 +187,7 @@ export default function Home() {
                     <TableCell className="font-medium">TXN-987654321</TableCell>
                     <TableCell>
                       <div className="flex items-center space-x-3">
-                        <div className="w-8 h-8 bg-gradient-to-r from-green-500 to-teal-600 rounded-full flex items-center justify-center text-white font-medium text-xs">
+                        <div className="w-8 h-8 bg-gradient-to-r from-chart-3 to-chart-2 rounded-full flex items-center justify-center text-white font-medium text-xs">
                           JL
                         </div>
                         <span>Jordan Lee</span>
@@ -204,7 +208,7 @@ export default function Home() {
                     <TableCell className="font-medium">INV-567890123</TableCell>
                     <TableCell>
                       <div className="flex items-center space-x-3">
-                        <div className="w-8 h-8 bg-gradient-to-r from-pink-500 to-rose-600 rounded-full flex items-center justify-center text-white font-medium text-xs">
+                        <div className="w-8 h-8 bg-gradient-to-r from-chart-5 to-destructive rounded-full flex items-center justify-center text-white font-medium text-xs">
                           AK
                         </div>
                         <span>Alexis Kim</span>
@@ -230,7 +234,7 @@ export default function Home() {
         {/* Right Column - Sidebar */}
         <div className="space-y-6">
           {/* Recent Sales */}
-          <Card>
+          <Card className="bg-gradient-card hover-lift border-border/50">
             <CardHeader>
               <CardTitle>Recent Sales</CardTitle>
               <CardDescription>
@@ -240,7 +244,7 @@ export default function Home() {
             <CardContent>
               <div className="space-y-8">
                 <div className="flex items-center">
-                  <div className="w-9 h-9 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-medium text-sm">
+                  <div className="w-9 h-9 bg-gradient-to-r from-primary to-primary/80 rounded-full flex items-center justify-center text-primary-foreground font-medium text-sm">
                     OH
                   </div>
                   <div className="ml-4 space-y-1">
@@ -254,7 +258,7 @@ export default function Home() {
                   <div className="ml-auto font-medium">+$1,999.00</div>
                 </div>
                 <div className="flex items-center">
-                  <div className="w-9 h-9 bg-gradient-to-r from-green-500 to-teal-600 rounded-full flex items-center justify-center text-white font-medium text-sm">
+                  <div className="w-9 h-9 bg-gradient-to-r from-chart-3 to-chart-2 rounded-full flex items-center justify-center text-white font-medium text-sm">
                     JL
                   </div>
                   <div className="ml-4 space-y-1">
@@ -268,7 +272,7 @@ export default function Home() {
                   <div className="ml-auto font-medium">+$39.00</div>
                 </div>
                 <div className="flex items-center">
-                  <div className="w-9 h-9 bg-gradient-to-r from-pink-500 to-rose-600 rounded-full flex items-center justify-center text-white font-medium text-sm">
+                  <div className="w-9 h-9 bg-gradient-to-r from-chart-5 to-destructive rounded-full flex items-center justify-center text-white font-medium text-sm">
                     IN
                   </div>
                   <div className="ml-4 space-y-1">
@@ -286,7 +290,7 @@ export default function Home() {
           </Card>
 
           {/* Quick Stats */}
-          <Card>
+          <Card className="bg-gradient-card hover-lift border-border/50">
             <CardHeader>
               <CardTitle>Quick Stats</CardTitle>
               <CardDescription>Statistik cepat hari ini</CardDescription>
@@ -294,28 +298,28 @@ export default function Home() {
             <CardContent className="space-y-4">
               <div className="flex items-center justify-between">
                 <div className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                  <div className="w-2 h-2 bg-primary rounded-full"></div>
                   <span className="text-sm">Active Users</span>
                 </div>
                 <span className="font-medium">1,234</span>
               </div>
               <div className="flex items-center justify-between">
                 <div className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                  <div className="w-2 h-2 bg-[hsl(var(--success))] rounded-full"></div>
                   <span className="text-sm">Orders Today</span>
                 </div>
                 <span className="font-medium">89</span>
               </div>
               <div className="flex items-center justify-between">
                 <div className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
+                  <div className="w-2 h-2 bg-[hsl(var(--warning))] rounded-full"></div>
                   <span className="text-sm">Pending</span>
                 </div>
                 <span className="font-medium">12</span>
               </div>
               <div className="flex items-center justify-between">
                 <div className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-red-500 rounded-full"></div>
+                  <div className="w-2 h-2 bg-destructive rounded-full"></div>
                   <span className="text-sm">Failed</span>
                 </div>
                 <span className="font-medium">3</span>
@@ -324,7 +328,7 @@ export default function Home() {
           </Card>
 
           {/* Activity Feed */}
-          <Card>
+          <Card className="bg-gradient-card hover-lift border-border/50">
             <CardHeader>
               <CardTitle>Activity Feed</CardTitle>
               <CardDescription>Aktivitas terbaru sistem</CardDescription>
@@ -332,7 +336,7 @@ export default function Home() {
             <CardContent>
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-green-500 rounded-full mt-2"></div>
+                  <div className="w-2 h-2 bg-[hsl(var(--success))] rounded-full mt-2"></div>
                   <div className="space-y-1">
                     <p className="text-sm font-medium">Payment Received</p>
                     <p className="text-xs text-muted-foreground">
@@ -341,7 +345,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-blue-500 rounded-full mt-2"></div>
+                  <div className="w-2 h-2 bg-primary rounded-full mt-2"></div>
                   <div className="space-y-1">
                     <p className="text-sm font-medium">New User Registered</p>
                     <p className="text-xs text-muted-foreground">
@@ -350,7 +354,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-yellow-500 rounded-full mt-2"></div>
+                  <div className="w-2 h-2 bg-[hsl(var(--warning))] rounded-full mt-2"></div>
                   <div className="space-y-1">
                     <p className="text-sm font-medium">Order Processing</p>
                     <p className="text-xs text-muted-foreground">
@@ -363,7 +367,7 @@ export default function Home() {
           </Card>
 
           {/* Credit Card Info */}
-          <Card>
+          <Card className="bg-gradient-card hover-lift border-border/50">
             <CardHeader>
               <CardTitle>Payment Methods</CardTitle>
               <CardDescription>Metode pembayaran yang tersedia</CardDescription>

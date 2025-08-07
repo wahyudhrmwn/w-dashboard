@@ -59,7 +59,7 @@ export default function TransferPage() {
 
       {/* Stats Cards */}
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-        <Card>
+        <Card className="bg-gradient-card hover-lift border-border/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">
               Total Transfer
@@ -74,7 +74,7 @@ export default function TransferPage() {
           </CardContent>
         </Card>
 
-        <Card>
+        <Card className="bg-gradient-card hover-lift border-border/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">
               Transfer Hari Ini
@@ -89,7 +89,7 @@ export default function TransferPage() {
           </CardContent>
         </Card>
 
-        <Card>
+        <Card className="bg-gradient-card hover-lift border-border/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">Berhasil</CardTitle>
             <CheckCircle className="h-4 w-4 text-green-500" />
@@ -102,7 +102,7 @@ export default function TransferPage() {
           </CardContent>
         </Card>
 
-        <Card>
+        <Card className="bg-gradient-card hover-lift border-border/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">
               Penerima Aktif
@@ -119,7 +119,7 @@ export default function TransferPage() {
       <div className="grid gap-6 lg:grid-cols-3">
         {/* Transfer Form */}
         <div className="lg:col-span-2 space-y-6">
-          <Card>
+          <Card className="bg-gradient-card hover-lift border-border/50">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <Send className="h-5 w-5" />
@@ -237,7 +237,7 @@ export default function TransferPage() {
           </Card>
 
           {/* Recent Transfers */}
-          <Card>
+          <Card className="bg-gradient-card hover-lift border-border/50">
             <CardHeader>
               <div className="flex items-center justify-between">
                 <div>
@@ -366,7 +366,7 @@ export default function TransferPage() {
         {/* Sidebar */}
         <div className="space-y-6">
           {/* Quick Transfer */}
-          <Card>
+          <Card className="bg-gradient-card hover-lift border-border/50">
             <CardHeader>
               <CardTitle>Transfer Cepat</CardTitle>
               <CardDescription>
@@ -397,7 +397,7 @@ export default function TransferPage() {
           </Card>
 
           {/* Transfer Tips */}
-          <Card>
+          <Card className="bg-gradient-card hover-lift border-border/50">
             <CardHeader>
               <CardTitle>Tips Transfer Aman</CardTitle>
               <CardDescription>

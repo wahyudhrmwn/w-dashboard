@@ -56,7 +56,7 @@ export default function PaymentPage() {
 
       {/* Payment Stats */}
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-        <Card>
+        <Card className="bg-gradient-card hover-lift border-border/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">
               Total Pembayaran
@@ -71,7 +71,7 @@ export default function PaymentPage() {
           </CardContent>
         </Card>
 
-        <Card>
+        <Card className="bg-gradient-card hover-lift border-border/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">Berhasil</CardTitle>
             <CheckCircle className="h-4 w-4 text-green-500" />
@@ -84,7 +84,7 @@ export default function PaymentPage() {
           </CardContent>
         </Card>
 
-        <Card>
+        <Card className="bg-gradient-card hover-lift border-border/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">Pending</CardTitle>
             <Clock className="h-4 w-4 text-yellow-500" />
@@ -95,7 +95,7 @@ export default function PaymentPage() {
           </CardContent>
         </Card>
 
-        <Card>
+        <Card className="bg-gradient-card hover-lift border-border/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">Rata-rata</CardTitle>
             <TrendingUp className="h-4 w-4 text-muted-foreground" />
@@ -109,7 +109,7 @@ export default function PaymentPage() {
 
       {/* Payment Methods */}
       <div className="grid gap-6 md:grid-cols-2">
-        <Card>
+        <Card className="bg-gradient-card hover-lift border-border/50">
           <CardHeader>
             <CardTitle>Metode Pembayaran Aktif</CardTitle>
             <CardDescription>
@@ -185,7 +185,7 @@ export default function PaymentPage() {
           </CardContent>
         </Card>
 
-        <Card>
+        <Card className="bg-gradient-card hover-lift border-border/50">
           <CardHeader>
             <CardTitle>Payment Analytics</CardTitle>
             <CardDescription>
@@ -236,7 +236,7 @@ export default function PaymentPage() {
       </div>
 
       {/* Recent Payments */}
-      <Card>
+      <Card className="bg-gradient-card hover-lift border-border/50">
         <CardHeader>
           <div className="flex items-center justify-between">
             <div>

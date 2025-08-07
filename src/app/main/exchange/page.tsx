@@ -56,7 +56,7 @@ export default function ExchangePage() {
 
       {/* Exchange Stats */}
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-        <Card>
+        <Card className="bg-gradient-card hover-lift border-border/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">
               Volume Hari Ini
@@ -71,7 +71,7 @@ export default function ExchangePage() {
           </CardContent>
         </Card>
 
-        <Card>
+        <Card className="bg-gradient-card hover-lift border-border/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">
               Total Transaksi
@@ -86,7 +86,7 @@ export default function ExchangePage() {
           </CardContent>
         </Card>
 
-        <Card>
+        <Card className="bg-gradient-card hover-lift border-border/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">
               Spread Rata-rata
@@ -99,7 +99,7 @@ export default function ExchangePage() {
           </CardContent>
         </Card>
 
-        <Card>
+        <Card className="bg-gradient-card hover-lift border-border/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">Savings</CardTitle>
             <DollarSign className="h-4 w-4 text-green-500" />
@@ -115,7 +115,7 @@ export default function ExchangePage() {
 
       {/* Exchange Interface */}
       <div className="grid gap-6 md:grid-cols-2">
-        <Card>
+        <Card className="bg-gradient-card hover-lift border-border/50">
           <CardHeader>
             <CardTitle>Tukar Mata Uang</CardTitle>
             <CardDescription>
@@ -187,7 +187,7 @@ export default function ExchangePage() {
           </CardContent>
         </Card>
 
-        <Card>
+        <Card className="bg-gradient-card hover-lift border-border/50">
           <CardHeader>
             <div className="flex items-center justify-between">
               <div>
@@ -290,7 +290,7 @@ export default function ExchangePage() {
       </div>
 
       {/* Recent Exchanges */}
-      <Card>
+      <Card className="bg-gradient-card hover-lift border-border/50">
         <CardHeader>
           <CardTitle>Riwayat Penukaran Terbaru</CardTitle>
           <CardDescription>

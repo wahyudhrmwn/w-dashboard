@@ -55,7 +55,7 @@ export default function AIModelsPage() {
 
       {/* Stats Cards */}
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-        <Card>
+        <Card className="bg-gradient-card hover-lift border-border/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">Total Models</CardTitle>
             <Brain className="h-4 w-4 text-muted-foreground" />
@@ -68,7 +68,7 @@ export default function AIModelsPage() {
           </CardContent>
         </Card>
 
-        <Card>
+        <Card className="bg-gradient-card hover-lift border-border/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">Deployed</CardTitle>
             <Zap className="h-4 w-4 text-green-500" />
@@ -81,7 +81,7 @@ export default function AIModelsPage() {
           </CardContent>
         </Card>
 
-        <Card>
+        <Card className="bg-gradient-card hover-lift border-border/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">
               Predictions Today
@@ -96,7 +96,7 @@ export default function AIModelsPage() {
           </CardContent>
         </Card>
 
-        <Card>
+        <Card className="bg-gradient-card hover-lift border-border/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">Avg Accuracy</CardTitle>
             <BarChart3 className="h-4 w-4 text-green-500" />
@@ -110,7 +110,7 @@ export default function AIModelsPage() {
 
       {/* Model Categories */}
       <div className="grid gap-4 md:grid-cols-4">
-        <Card className="hover:shadow-md transition-shadow cursor-pointer">
+        <Card className="bg-gradient-card hover-lift border-border/50 cursor-pointer">
           <CardContent className="flex flex-col items-center justify-center p-6 text-center">
             <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg flex items-center justify-center mb-3">
               <Brain className="h-6 w-6 text-white" />
@@ -125,7 +125,7 @@ export default function AIModelsPage() {
           </CardContent>
         </Card>
 
-        <Card className="hover:shadow-md transition-shadow cursor-pointer">
+        <Card className="bg-gradient-card hover-lift border-border/50 cursor-pointer">
           <CardContent className="flex flex-col items-center justify-center p-6 text-center">
             <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-green-600 rounded-lg flex items-center justify-center mb-3">
               <BarChart3 className="h-6 w-6 text-white" />
@@ -140,7 +140,7 @@ export default function AIModelsPage() {
           </CardContent>
         </Card>
 
-        <Card className="hover:shadow-md transition-shadow cursor-pointer">
+        <Card className="bg-gradient-card hover-lift border-border/50 cursor-pointer">
           <CardContent className="flex flex-col items-center justify-center p-6 text-center">
             <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-purple-600 rounded-lg flex items-center justify-center mb-3">
               <Cpu className="h-6 w-6 text-white" />
@@ -155,7 +155,7 @@ export default function AIModelsPage() {
           </CardContent>
         </Card>
 
-        <Card className="hover:shadow-md transition-shadow cursor-pointer">
+        <Card className="bg-gradient-card hover-lift border-border/50 cursor-pointer">
           <CardContent className="flex flex-col items-center justify-center p-6 text-center">
             <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-orange-600 rounded-lg flex items-center justify-center mb-3">
               <Database className="h-6 w-6 text-white" />
@@ -194,7 +194,7 @@ export default function AIModelsPage() {
       </div>
 
       {/* Deployed Models */}
-      <Card>
+      <Card className="bg-gradient-card hover-lift border-border/50">
         <CardHeader>
           <CardTitle>Models yang Sedang Berjalan</CardTitle>
           <CardDescription>
@@ -385,7 +385,7 @@ export default function AIModelsPage() {
 
       {/* Model Performance */}
       <div className="grid gap-6 md:grid-cols-2">
-        <Card>
+        <Card className="bg-gradient-card hover-lift border-border/50">
           <CardHeader>
             <CardTitle>Top Performing Models</CardTitle>
             <CardDescription>Models dengan akurasi tertinggi</CardDescription>
@@ -447,7 +447,7 @@ export default function AIModelsPage() {
           </CardContent>
         </Card>
 
-        <Card>
+        <Card className="bg-gradient-card hover-lift border-border/50">
           <CardHeader>
             <CardTitle>Training Queue</CardTitle>
             <CardDescription>

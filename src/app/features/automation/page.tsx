@@ -51,7 +51,7 @@ export default function AutomationPage() {
 
       {/* Stats Cards */}
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-        <Card>
+        <Card className="bg-gradient-card hover-lift border-border/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">
               Total Workflow
@@ -66,7 +66,7 @@ export default function AutomationPage() {
           </CardContent>
         </Card>
 
-        <Card>
+        <Card className="bg-gradient-card hover-lift border-border/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">Aktif</CardTitle>
             <Play className="h-4 w-4 text-green-500" />
@@ -79,7 +79,7 @@ export default function AutomationPage() {
           </CardContent>
         </Card>
 
-        <Card>
+        <Card className="bg-gradient-card hover-lift border-border/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">
               Eksekusi Hari Ini
@@ -94,7 +94,7 @@ export default function AutomationPage() {
           </CardContent>
         </Card>
 
-        <Card>
+        <Card className="bg-gradient-card hover-lift border-border/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">Success Rate</CardTitle>
             <BarChart3 className="h-4 w-4 text-green-500" />
@@ -110,7 +110,7 @@ export default function AutomationPage() {
 
       {/* Quick Actions */}
       <div className="grid gap-4 md:grid-cols-3">
-        <Card className="hover:shadow-md transition-shadow cursor-pointer">
+        <Card className="bg-gradient-card hover-lift border-border/50 cursor-pointer">
           <CardContent className="flex items-center justify-between p-6">
             <div className="flex items-center space-x-3">
               <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg flex items-center justify-center">
@@ -129,7 +129,7 @@ export default function AutomationPage() {
           </CardContent>
         </Card>
 
-        <Card className="hover:shadow-md transition-shadow cursor-pointer">
+        <Card className="bg-gradient-card hover-lift border-border/50 cursor-pointer">
           <CardContent className="flex items-center justify-between p-6">
             <div className="flex items-center space-x-3">
               <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-green-600 rounded-lg flex items-center justify-center">
@@ -148,7 +148,7 @@ export default function AutomationPage() {
           </CardContent>
         </Card>
 
-        <Card className="hover:shadow-md transition-shadow cursor-pointer">
+        <Card className="bg-gradient-card hover-lift border-border/50 cursor-pointer">
           <CardContent className="flex items-center justify-between p-6">
             <div className="flex items-center space-x-3">
               <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-purple-600 rounded-lg flex items-center justify-center">
@@ -190,7 +190,7 @@ export default function AutomationPage() {
       </div>
 
       {/* Active Workflows */}
-      <Card>
+      <Card className="bg-gradient-card hover-lift border-border/50">
         <CardHeader>
           <CardTitle>Workflow Aktif</CardTitle>
           <CardDescription>
@@ -376,7 +376,7 @@ export default function AutomationPage() {
       </Card>
 
       {/* Recent Activity */}
-      <Card>
+      <Card className="bg-gradient-card hover-lift border-border/50">
         <CardHeader>
           <CardTitle>Aktivitas Terbaru</CardTitle>
           <CardDescription>
