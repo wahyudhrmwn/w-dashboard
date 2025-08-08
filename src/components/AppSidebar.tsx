@@ -255,7 +255,7 @@ export function AppSidebar() {
                                 className={cn(
                                   "hover-lift",
                                   isActiveRoute(subItem.href || "") &&
-                                    "sidebar-submenu-active font-medium shadow-sm"
+                                    "sidebar-submenu-active text-white font-medium shadow-sm"
                                 )}
                               >
                                 <Link

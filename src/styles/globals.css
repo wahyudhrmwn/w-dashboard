@@ -160,8 +160,8 @@
   .sidebar-submenu-active {
     background: linear-gradient(
       90deg,
-      rgba(142, 5, 194, 0.2) 0%,
-      /* #8E05C2 with opacity */ rgba(112, 11, 151, 0.1) 100%
+      hsl(280 90% 40%) 0% /* #8E05C2 */,
+      /* #8E05C2 with opacity */ rgba(0, 0, 0, 0.1) 100%
         /* #700B97 with opacity */
     );
     border-left: 3px solid hsl(275 93% 41%); /* #8E05C2 */
