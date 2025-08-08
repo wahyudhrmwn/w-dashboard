@@ -53,7 +53,7 @@ export default function AIAgentPage() {
       </div>
 
       {/* Stats Cards */}
-      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
         <Card className="bg-gradient-card hover-lift border-border/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">Total Agents</CardTitle>
@@ -110,7 +110,7 @@ export default function AIAgentPage() {
       </div>
 
       {/* Agent Categories */}
-      <div className="grid gap-4 md:grid-cols-3">
+      <div className="grid gap-6 md:grid-cols-3">
         <Card className="bg-gradient-card hover-lift border-border/50 cursor-pointer">
           <CardContent className="flex items-center justify-between p-6">
             <div className="flex items-center space-x-3">

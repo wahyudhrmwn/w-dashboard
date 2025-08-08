@@ -67,7 +67,7 @@ export default function HelpCenterPage() {
       </Card>
 
       {/* Quick Help Categories */}
-      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
         <Card className="bg-gradient-card hover-lift border-border/50 cursor-pointer">
           <CardContent className="flex flex-col items-center justify-center p-6 text-center">
             <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg flex items-center justify-center mb-3">
