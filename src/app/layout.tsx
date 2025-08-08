@@ -5,6 +5,7 @@ import {
 } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/AppSidebar";
 import { Separator } from "@/components/ui/separator";
+import { DynamicBreadcrumb } from "@/components/DynamicBreadcrumb";
 import "@/styles/globals.css";
 
 export default function RootLayout({
@@ -22,17 +23,10 @@ export default function RootLayout({
               <div className="flex items-center gap-2 px-4">
                 <SidebarTrigger className="-ml-1" />
                 <Separator orientation="vertical" className="mr-2 h-4" />
-                <div className="flex flex-col">
-                  <span className="font-semibold">Dashboard</span>
-                  <span className="text-xs text-muted-foreground">
-                    Manage your application
-                  </span>
-                </div>
+                <DynamicBreadcrumb />
               </div>
             </header>
-            <div className="flex flex-1 flex-col gap-4 p-4 pt-0">
-              {children}
-            </div>
+            <div className="flex flex-1 flex-col p-6 pt-0">{children}</div>
           </SidebarInset>
         </SidebarProvider>
       </body>
