@@ -219,9 +219,6 @@ export function AppSidebar() {
 
       <SidebarContent className="px-2">
         <SidebarGroup>
-          <SidebarGroupLabel className="px-4 py-2 text-xs font-medium text-muted-foreground">
-            Platform
-          </SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               {platformItems.map((item) => (
@@ -318,7 +315,9 @@ export function AppSidebar() {
           </div>
           <div className="flex flex-col flex-1">
             <span className="text-sm font-medium">shadcn</span>
-            <span className="text-xs text-muted-foreground">m@example.com</span>
+            <span className="text-xs text-muted-foreground">
+              shadcn@example.com
+            </span>
           </div>
           <MoreHorizontal className="size-4 text-muted-foreground" />
         </div>
