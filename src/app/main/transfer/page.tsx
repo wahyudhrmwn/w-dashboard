@@ -36,21 +36,23 @@ import {
 
 export default function TransferPage() {
   return (
-    <div className="space-y-6">
+    <div className="space-y-4 sm:space-y-6">
       {/* Header */}
-      <div className="flex items-center justify-between">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
-          <h1 className="text-3xl font-bold tracking-tight">Transfer</h1>
-          <p className="text-muted-foreground">
+          <h1 className="text-2xl sm:text-3xl font-bold tracking-tight">
+            Transfer
+          </h1>
+          <p className="text-muted-foreground text-sm sm:text-base">
             Kirim uang dengan mudah dan aman ke rekening bank manapun
           </p>
         </div>
-        <div className="flex items-center space-x-2">
-          <Button variant="outline" size="sm">
+        <div className="flex items-center space-x-2 flex-shrink-0">
+          <Button variant="outline" size="sm" className="text-sm">
             <Download className="h-4 w-4 mr-2" />
             Export
           </Button>
-          <Button size="sm">
+          <Button size="sm" className="text-sm">
             <Send className="h-4 w-4 mr-2" />
             Transfer Baru
           </Button>
@@ -58,7 +60,7 @@ export default function TransferPage() {
       </div>
 
       {/* Stats Cards */}
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+      <div className="grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
         <Card className="bg-gradient-card hover-lift border-border/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">
@@ -116,9 +118,9 @@ export default function TransferPage() {
         </Card>
       </div>
 
-      <div className="grid gap-6 lg:grid-cols-3">
+      <div className="grid gap-4 sm:gap-6 grid-cols-1 lg:grid-cols-3">
         {/* Transfer Form */}
-        <div className="lg:col-span-2 space-y-6">
+        <div className="lg:col-span-2 space-y-4 sm:space-y-6">
           <Card className="bg-gradient-card hover-lift border-border/50">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
@@ -129,8 +131,8 @@ export default function TransferPage() {
                 Kirim uang ke rekening bank atau e-wallet
               </CardDescription>
             </CardHeader>
-            <CardContent className="space-y-6">
-              <div className="grid gap-4 md:grid-cols-2">
+            <CardContent className="space-y-4 sm:space-y-6">
+              <div className="grid gap-4 grid-cols-1 sm:grid-cols-2">
                 <div className="space-y-2">
                   <label className="text-sm font-medium">Dari Rekening</label>
                   <div className="flex items-center space-x-3 p-3 border rounded-lg">
@@ -172,19 +174,22 @@ export default function TransferPage() {
               <div className="space-y-4">
                 <div className="space-y-2">
                   <label className="text-sm font-medium">Nama Penerima</label>
-                  <Input placeholder="Masukkan nama penerima" />
+                  <Input
+                    placeholder="Masukkan nama penerima"
+                    className="mobile-input"
+                  />
                 </div>
 
-                <div className="grid gap-4 md:grid-cols-2">
+                <div className="grid gap-4 grid-cols-1 sm:grid-cols-2">
                   <div className="space-y-2">
                     <label className="text-sm font-medium">Bank Tujuan</label>
-                    <Input placeholder="Pilih bank" />
+                    <Input placeholder="Pilih bank" className="mobile-input" />
                   </div>
                   <div className="space-y-2">
                     <label className="text-sm font-medium">
                       Nomor Rekening
                     </label>
-                    <Input placeholder="1234567890" />
+                    <Input placeholder="1234567890" className="mobile-input" />
                   </div>
                 </div>
               </div>
@@ -196,7 +201,7 @@ export default function TransferPage() {
                     <DollarSign className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
                     <Input
                       placeholder="0.00"
-                      className="pl-10 text-lg font-medium"
+                      className="pl-10 text-lg font-medium mobile-input"
                     />
                   </div>
                 </div>
@@ -205,7 +210,10 @@ export default function TransferPage() {
                   <label className="text-sm font-medium">
                     Catatan (Opsional)
                   </label>
-                  <Input placeholder="Tulis catatan transfer..." />
+                  <Input
+                    placeholder="Tulis catatan transfer..."
+                    className="mobile-input"
+                  />
                 </div>
               </div>
 
@@ -224,11 +232,11 @@ export default function TransferPage() {
                 </div>
               </div>
 
-              <div className="flex space-x-3">
-                <Button variant="outline" className="flex-1">
+              <div className="flex flex-col sm:flex-row gap-3 sm:space-x-3 sm:gap-0">
+                <Button variant="outline" className="flex-1 text-sm">
                   Simpan sebagai Template
                 </Button>
-                <Button className="flex-1">
+                <Button className="flex-1 text-sm">
                   <Send className="h-4 w-4 mr-2" />
                   Kirim Transfer
                 </Button>
@@ -246,15 +254,15 @@ export default function TransferPage() {
                     Riwayat transfer dalam 30 hari terakhir
                   </CardDescription>
                 </div>
-                <div className="flex items-center space-x-2">
+                <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 sm:space-x-2">
                   <div className="relative">
                     <Search className="absolute left-2 top-2.5 h-4 w-4 text-muted-foreground" />
                     <Input
                       placeholder="Cari transfer..."
-                      className="pl-8 w-[200px]"
+                      className="pl-8 w-full sm:w-[200px]"
                     />
                   </div>
-                  <Button variant="outline" size="sm">
+                  <Button variant="outline" size="sm" className="text-sm">
                     <Filter className="h-4 w-4 mr-2" />
                     Filter
                   </Button>
@@ -262,109 +270,113 @@ export default function TransferPage() {
               </div>
             </CardHeader>
             <CardContent>
-              <Table>
-                <TableHeader>
-                  <TableRow>
-                    <TableHead>Penerima</TableHead>
-                    <TableHead>Bank</TableHead>
-                    <TableHead>Jumlah</TableHead>
-                    <TableHead>Tanggal</TableHead>
-                    <TableHead>Status</TableHead>
-                    <TableHead className="text-right">Aksi</TableHead>
-                  </TableRow>
-                </TableHeader>
-                <TableBody>
-                  <TableRow>
-                    <TableCell>
-                      <div className="flex items-center space-x-3">
-                        <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-medium text-xs">
-                          JD
+              <div className="overflow-x-auto">
+                <Table className="mobile-table">
+                  <TableHeader>
+                    <TableRow>
+                      <TableHead className="min-w-[150px]">Penerima</TableHead>
+                      <TableHead className="min-w-[80px]">Bank</TableHead>
+                      <TableHead className="min-w-[100px]">Jumlah</TableHead>
+                      <TableHead className="min-w-[140px]">Tanggal</TableHead>
+                      <TableHead className="min-w-[100px]">Status</TableHead>
+                      <TableHead className="text-right min-w-[80px]">
+                        Aksi
+                      </TableHead>
+                    </TableRow>
+                  </TableHeader>
+                  <TableBody>
+                    <TableRow>
+                      <TableCell>
+                        <div className="flex items-center space-x-3">
+                          <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-medium text-xs">
+                            JD
+                          </div>
+                          <div>
+                            <p className="font-medium">John Doe</p>
+                            <p className="text-sm text-muted-foreground">
+                              1234567890
+                            </p>
+                          </div>
                         </div>
-                        <div>
-                          <p className="font-medium">John Doe</p>
-                          <p className="text-sm text-muted-foreground">
-                            1234567890
-                          </p>
+                      </TableCell>
+                      <TableCell>
+                        <div className="flex items-center space-x-2">
+                          <Building2 className="h-4 w-4 text-blue-600" />
+                          <span>BCA</span>
                         </div>
-                      </div>
-                    </TableCell>
-                    <TableCell>
-                      <div className="flex items-center space-x-2">
-                        <Building2 className="h-4 w-4 text-blue-600" />
-                        <span>BCA</span>
-                      </div>
-                    </TableCell>
-                    <TableCell className="font-medium">$1,250.00</TableCell>
-                    <TableCell>15 Jan 2024, 14:30</TableCell>
-                    <TableCell>
-                      <Badge
-                        variant="default"
-                        className="bg-green-500 text-white"
-                      >
-                        Berhasil
-                      </Badge>
-                    </TableCell>
-                    <TableCell className="text-right">
-                      <div className="flex items-center justify-end space-x-2">
-                        <Button variant="ghost" size="sm">
-                          <Eye className="h-4 w-4" />
-                        </Button>
-                        <Button variant="ghost" size="sm">
-                          <MoreHorizontal className="h-4 w-4" />
-                        </Button>
-                      </div>
-                    </TableCell>
-                  </TableRow>
+                      </TableCell>
+                      <TableCell className="font-medium">$1,250.00</TableCell>
+                      <TableCell>15 Jan 2024, 14:30</TableCell>
+                      <TableCell>
+                        <Badge
+                          variant="default"
+                          className="bg-green-500 text-white"
+                        >
+                          Berhasil
+                        </Badge>
+                      </TableCell>
+                      <TableCell className="text-right">
+                        <div className="flex items-center justify-end space-x-2">
+                          <Button variant="ghost" size="sm">
+                            <Eye className="h-4 w-4" />
+                          </Button>
+                          <Button variant="ghost" size="sm">
+                            <MoreHorizontal className="h-4 w-4" />
+                          </Button>
+                        </div>
+                      </TableCell>
+                    </TableRow>
 
-                  <TableRow>
-                    <TableCell>
-                      <div className="flex items-center space-x-3">
-                        <div className="w-8 h-8 bg-gradient-to-r from-green-500 to-teal-600 rounded-full flex items-center justify-center text-white font-medium text-xs">
-                          AS
+                    <TableRow>
+                      <TableCell>
+                        <div className="flex items-center space-x-3">
+                          <div className="w-8 h-8 bg-gradient-to-r from-green-500 to-teal-600 rounded-full flex items-center justify-center text-white font-medium text-xs">
+                            AS
+                          </div>
+                          <div>
+                            <p className="font-medium">Alice Smith</p>
+                            <p className="text-sm text-muted-foreground">
+                              9876543210
+                            </p>
+                          </div>
                         </div>
-                        <div>
-                          <p className="font-medium">Alice Smith</p>
-                          <p className="text-sm text-muted-foreground">
-                            9876543210
-                          </p>
+                      </TableCell>
+                      <TableCell>
+                        <div className="flex items-center space-x-2">
+                          <Building2 className="h-4 w-4 text-red-600" />
+                          <span>Mandiri</span>
                         </div>
-                      </div>
-                    </TableCell>
-                    <TableCell>
-                      <div className="flex items-center space-x-2">
-                        <Building2 className="h-4 w-4 text-red-600" />
-                        <span>Mandiri</span>
-                      </div>
-                    </TableCell>
-                    <TableCell className="font-medium">$850.75</TableCell>
-                    <TableCell>15 Jan 2024, 13:45</TableCell>
-                    <TableCell>
-                      <Badge
-                        variant="default"
-                        className="bg-green-500 text-white"
-                      >
-                        Berhasil
-                      </Badge>
-                    </TableCell>
-                    <TableCell className="text-right">
-                      <div className="flex items-center justify-end space-x-2">
-                        <Button variant="ghost" size="sm">
-                          <Eye className="h-4 w-4" />
-                        </Button>
-                        <Button variant="ghost" size="sm">
-                          <MoreHorizontal className="h-4 w-4" />
-                        </Button>
-                      </div>
-                    </TableCell>
-                  </TableRow>
-                </TableBody>
-              </Table>
+                      </TableCell>
+                      <TableCell className="font-medium">$850.75</TableCell>
+                      <TableCell>15 Jan 2024, 13:45</TableCell>
+                      <TableCell>
+                        <Badge
+                          variant="default"
+                          className="bg-green-500 text-white"
+                        >
+                          Berhasil
+                        </Badge>
+                      </TableCell>
+                      <TableCell className="text-right">
+                        <div className="flex items-center justify-end space-x-2">
+                          <Button variant="ghost" size="sm">
+                            <Eye className="h-4 w-4" />
+                          </Button>
+                          <Button variant="ghost" size="sm">
+                            <MoreHorizontal className="h-4 w-4" />
+                          </Button>
+                        </div>
+                      </TableCell>
+                    </TableRow>
+                  </TableBody>
+                </Table>
+              </div>
             </CardContent>
           </Card>
         </div>
 
         {/* Sidebar */}
-        <div className="space-y-6">
+        <div className="space-y-4 sm:space-y-6">
           {/* Quick Transfer */}
           <Card className="bg-gradient-card hover-lift border-border/50">
             <CardHeader>

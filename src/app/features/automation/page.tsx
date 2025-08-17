@@ -28,21 +28,23 @@ import {
 
 export default function AutomationPage() {
   return (
-    <div className="space-y-6">
+    <div className="space-y-4 sm:space-y-6">
       {/* Header */}
-      <div className="flex items-center justify-between">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
-          <h1 className="text-3xl font-bold tracking-tight">Automation</h1>
-          <p className="text-muted-foreground">
+          <h1 className="text-2xl sm:text-3xl font-bold tracking-tight">
+            Automation
+          </h1>
+          <p className="text-muted-foreground text-sm sm:text-base">
             Otomatisasi workflow dan proses bisnis untuk meningkatkan efisiensi
           </p>
         </div>
-        <div className="flex items-center space-x-2">
-          <Button variant="outline" size="sm">
+        <div className="flex items-center space-x-2 flex-shrink-0">
+          <Button variant="outline" size="sm" className="text-sm">
             <Settings className="h-4 w-4 mr-2" />
             Template
           </Button>
-          <Button size="sm">
+          <Button size="sm" className="text-sm">
             <Plus className="h-4 w-4 mr-2" />
             Buat Workflow
           </Button>
@@ -50,7 +52,7 @@ export default function AutomationPage() {
       </div>
 
       {/* Stats Cards */}
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+      <div className="grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
         <Card className="bg-gradient-card hover-lift border-border/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">
@@ -109,59 +111,75 @@ export default function AutomationPage() {
       </div>
 
       {/* Quick Actions */}
-      <div className="grid gap-6 md:grid-cols-3">
+      <div className="grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
         <Card className="bg-gradient-card hover-lift border-border/50 cursor-pointer">
-          <CardContent className="flex items-center justify-between p-6">
-            <div className="flex items-center space-x-3">
-              <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg flex items-center justify-center">
-                <Bot className="h-6 w-6 text-white" />
+          <CardContent className="flex flex-col sm:flex-row sm:items-center justify-between p-4 sm:p-6 gap-3 sm:gap-0">
+            <div className="flex items-center space-x-3 min-w-0 flex-1">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                <Bot className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
               </div>
-              <div>
-                <h3 className="font-medium">Email Automation</h3>
-                <p className="text-sm text-muted-foreground">
+              <div className="min-w-0 flex-1">
+                <h3 className="font-medium text-sm sm:text-base">
+                  Email Automation
+                </h3>
+                <p className="text-xs sm:text-sm text-muted-foreground">
                   Setup email workflows
                 </p>
               </div>
             </div>
-            <Button variant="outline" size="sm">
+            <Button
+              variant="outline"
+              size="sm"
+              className="text-sm self-start sm:self-auto flex-shrink-0"
+            >
               Buat
             </Button>
           </CardContent>
         </Card>
 
         <Card className="bg-gradient-card hover-lift border-border/50 cursor-pointer">
-          <CardContent className="flex items-center justify-between p-6">
-            <div className="flex items-center space-x-3">
-              <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-green-600 rounded-lg flex items-center justify-center">
-                <Zap className="h-6 w-6 text-white" />
+          <CardContent className="flex flex-col sm:flex-row sm:items-center justify-between p-4 sm:p-6 gap-3 sm:gap-0">
+            <div className="flex items-center space-x-3 min-w-0 flex-1">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-green-500 to-green-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                <Zap className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
               </div>
-              <div>
-                <h3 className="font-medium">Data Sync</h3>
-                <p className="text-sm text-muted-foreground">
+              <div className="min-w-0 flex-1">
+                <h3 className="font-medium text-sm sm:text-base">Data Sync</h3>
+                <p className="text-xs sm:text-sm text-muted-foreground">
                   Automated data synchronization
                 </p>
               </div>
             </div>
-            <Button variant="outline" size="sm">
+            <Button
+              variant="outline"
+              size="sm"
+              className="text-sm self-start sm:self-auto flex-shrink-0"
+            >
               Buat
             </Button>
           </CardContent>
         </Card>
 
         <Card className="bg-gradient-card hover-lift border-border/50 cursor-pointer">
-          <CardContent className="flex items-center justify-between p-6">
-            <div className="flex items-center space-x-3">
-              <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-purple-600 rounded-lg flex items-center justify-center">
-                <Timer className="h-6 w-6 text-white" />
+          <CardContent className="flex flex-col sm:flex-row sm:items-center justify-between p-4 sm:p-6 gap-3 sm:gap-0">
+            <div className="flex items-center space-x-3 min-w-0 flex-1">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-purple-500 to-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                <Timer className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
               </div>
-              <div>
-                <h3 className="font-medium">Scheduled Tasks</h3>
-                <p className="text-sm text-muted-foreground">
+              <div className="min-w-0 flex-1">
+                <h3 className="font-medium text-sm sm:text-base">
+                  Scheduled Tasks
+                </h3>
+                <p className="text-xs sm:text-sm text-muted-foreground">
                   Time-based automation
                 </p>
               </div>
             </div>
-            <Button variant="outline" size="sm">
+            <Button
+              variant="outline"
+              size="sm"
+              className="text-sm self-start sm:self-auto flex-shrink-0"
+            >
               Buat
             </Button>
           </CardContent>
@@ -169,23 +187,30 @@ export default function AutomationPage() {
       </div>
 
       {/* Filter and Search */}
-      <div className="flex items-center justify-between">
-        <div className="flex items-center space-x-2">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 sm:space-x-2">
           <div className="relative">
             <Search className="absolute left-2 top-2.5 h-4 w-4 text-muted-foreground" />
-            <Input placeholder="Cari workflow..." className="pl-8 w-[300px]" />
+            <Input
+              placeholder="Cari workflow..."
+              className="pl-8 w-full sm:w-[300px] mobile-input"
+            />
           </div>
-          <Button variant="outline" size="sm">
+          <Button variant="outline" size="sm" className="text-sm">
             <Filter className="h-4 w-4 mr-2" />
             Filter
           </Button>
         </div>
-        <div className="flex items-center space-x-2">
-          <Badge variant="outline">Semua (47)</Badge>
-          <Badge variant="default" className="bg-green-500 text-white">
+        <div className="flex items-center space-x-2 flex-wrap gap-2">
+          <Badge variant="outline" className="text-xs">
+            Semua (47)
+          </Badge>
+          <Badge variant="default" className="bg-green-500 text-white text-xs">
             Aktif (32)
           </Badge>
-          <Badge variant="secondary">Nonaktif (15)</Badge>
+          <Badge variant="secondary" className="text-xs">
+            Nonaktif (15)
+          </Badge>
         </div>
       </div>
 
@@ -199,175 +224,239 @@ export default function AutomationPage() {
         </CardHeader>
         <CardContent>
           <div className="space-y-4">
-            <div className="flex items-center justify-between p-4 border rounded-lg">
-              <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg flex items-center justify-center">
-                  <Bot className="h-6 w-6 text-white" />
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between p-3 sm:p-4 border rounded-lg gap-3 sm:gap-0">
+              <div className="flex items-center space-x-3 sm:space-x-4 min-w-0 flex-1">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Bot className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
                 </div>
-                <div>
-                  <h3 className="font-medium">Welcome Email Sequence</h3>
-                  <p className="text-sm text-muted-foreground">
+                <div className="min-w-0 flex-1">
+                  <h3 className="font-medium text-sm sm:text-base">
+                    Welcome Email Sequence
+                  </h3>
+                  <p className="text-xs sm:text-sm text-muted-foreground">
                     Mengirim email selamat datang untuk pengguna baru
                   </p>
-                  <div className="flex items-center space-x-4 mt-2">
-                    <div className="flex items-center space-x-1 text-sm text-muted-foreground">
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-4 mt-2 gap-1 sm:gap-0">
+                    <div className="flex items-center space-x-1 text-xs sm:text-sm text-muted-foreground">
                       <CheckCircle className="h-3 w-3 text-green-500" />
                       <span>247 eksekusi hari ini</span>
                     </div>
-                    <div className="flex items-center space-x-1 text-sm text-muted-foreground">
+                    <div className="flex items-center space-x-1 text-xs sm:text-sm text-muted-foreground">
                       <Clock className="h-3 w-3" />
                       <span>Last run: 2 min ago</span>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="flex items-center space-x-2">
-                <Badge variant="default" className="bg-green-500 text-white">
+              <div className="flex items-center space-x-2 self-start sm:self-auto flex-shrink-0">
+                <Badge
+                  variant="default"
+                  className="bg-green-500 text-white text-xs"
+                >
                   Running
                 </Badge>
-                <Button variant="outline" size="sm">
-                  <Pause className="h-4 w-4" />
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="h-6 sm:h-8 px-1 sm:px-2"
+                >
+                  <Pause className="h-3 w-3 sm:h-4 sm:w-4" />
                 </Button>
-                <Button variant="outline" size="sm">
-                  <Settings className="h-4 w-4" />
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="h-6 sm:h-8 px-1 sm:px-2"
+                >
+                  <Settings className="h-3 w-3 sm:h-4 sm:w-4" />
                 </Button>
               </div>
             </div>
 
-            <div className="flex items-center justify-between p-4 border rounded-lg">
-              <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-green-600 rounded-lg flex items-center justify-center">
-                  <Zap className="h-6 w-6 text-white" />
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between p-3 sm:p-4 border rounded-lg gap-3 sm:gap-0">
+              <div className="flex items-center space-x-3 sm:space-x-4 min-w-0 flex-1">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-green-500 to-green-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Zap className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
                 </div>
-                <div>
-                  <h3 className="font-medium">Payment Processing</h3>
-                  <p className="text-sm text-muted-foreground">
+                <div className="min-w-0 flex-1">
+                  <h3 className="font-medium text-sm sm:text-base">
+                    Payment Processing
+                  </h3>
+                  <p className="text-xs sm:text-sm text-muted-foreground">
                     Otomatis memproses pembayaran dan update status
                   </p>
-                  <div className="flex items-center space-x-4 mt-2">
-                    <div className="flex items-center space-x-1 text-sm text-muted-foreground">
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-4 mt-2 gap-1 sm:gap-0">
+                    <div className="flex items-center space-x-1 text-xs sm:text-sm text-muted-foreground">
                       <CheckCircle className="h-3 w-3 text-green-500" />
                       <span>89 pembayaran diproses</span>
                     </div>
-                    <div className="flex items-center space-x-1 text-sm text-muted-foreground">
+                    <div className="flex items-center space-x-1 text-xs sm:text-sm text-muted-foreground">
                       <Clock className="h-3 w-3" />
                       <span>Last run: 30 sec ago</span>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="flex items-center space-x-2">
-                <Badge variant="default" className="bg-green-500 text-white">
+              <div className="flex items-center space-x-2 self-start sm:self-auto flex-shrink-0">
+                <Badge
+                  variant="default"
+                  className="bg-green-500 text-white text-xs"
+                >
                   Running
                 </Badge>
-                <Button variant="outline" size="sm">
-                  <Pause className="h-4 w-4" />
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="h-6 sm:h-8 px-1 sm:px-2"
+                >
+                  <Pause className="h-3 w-3 sm:h-4 sm:w-4" />
                 </Button>
-                <Button variant="outline" size="sm">
-                  <Settings className="h-4 w-4" />
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="h-6 sm:h-8 px-1 sm:px-2"
+                >
+                  <Settings className="h-3 w-3 sm:h-4 sm:w-4" />
                 </Button>
               </div>
             </div>
 
-            <div className="flex items-center justify-between p-4 border rounded-lg">
-              <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-purple-600 rounded-lg flex items-center justify-center">
-                  <Timer className="h-6 w-6 text-white" />
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between p-3 sm:p-4 border rounded-lg gap-3 sm:gap-0">
+              <div className="flex items-center space-x-3 sm:space-x-4 min-w-0 flex-1">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-purple-500 to-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Timer className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
                 </div>
-                <div>
-                  <h3 className="font-medium">Daily Report Generation</h3>
-                  <p className="text-sm text-muted-foreground">
+                <div className="min-w-0 flex-1">
+                  <h3 className="font-medium text-sm sm:text-base">
+                    Daily Report Generation
+                  </h3>
+                  <p className="text-xs sm:text-sm text-muted-foreground">
                     Generate dan kirim laporan harian otomatis
                   </p>
-                  <div className="flex items-center space-x-4 mt-2">
-                    <div className="flex items-center space-x-1 text-sm text-muted-foreground">
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-4 mt-2 gap-1 sm:gap-0">
+                    <div className="flex items-center space-x-1 text-xs sm:text-sm text-muted-foreground">
                       <CheckCircle className="h-3 w-3 text-green-500" />
                       <span>Scheduled for 9:00 AM</span>
                     </div>
-                    <div className="flex items-center space-x-1 text-sm text-muted-foreground">
+                    <div className="flex items-center space-x-1 text-xs sm:text-sm text-muted-foreground">
                       <Clock className="h-3 w-3" />
                       <span>Next run: in 14 hours</span>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="flex items-center space-x-2">
-                <Badge variant="secondary">Scheduled</Badge>
-                <Button variant="outline" size="sm">
-                  <Play className="h-4 w-4" />
+              <div className="flex items-center space-x-2 self-start sm:self-auto flex-shrink-0">
+                <Badge variant="secondary" className="text-xs">
+                  Scheduled
+                </Badge>
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="h-6 sm:h-8 px-1 sm:px-2"
+                >
+                  <Play className="h-3 w-3 sm:h-4 sm:w-4" />
                 </Button>
-                <Button variant="outline" size="sm">
-                  <Settings className="h-4 w-4" />
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="h-6 sm:h-8 px-1 sm:px-2"
+                >
+                  <Settings className="h-3 w-3 sm:h-4 sm:w-4" />
                 </Button>
               </div>
             </div>
 
-            <div className="flex items-center justify-between p-4 border rounded-lg border-yellow-200">
-              <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-gradient-to-r from-yellow-500 to-yellow-600 rounded-lg flex items-center justify-center">
-                  <Bot className="h-6 w-6 text-white" />
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between p-3 sm:p-4 border rounded-lg border-yellow-200 gap-3 sm:gap-0">
+              <div className="flex items-center space-x-3 sm:space-x-4 min-w-0 flex-1">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-yellow-500 to-yellow-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Bot className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
                 </div>
-                <div>
-                  <h3 className="font-medium">Customer Support Automation</h3>
-                  <p className="text-sm text-muted-foreground">
+                <div className="min-w-0 flex-1">
+                  <h3 className="font-medium text-sm sm:text-base">
+                    Customer Support Automation
+                  </h3>
+                  <p className="text-xs sm:text-sm text-muted-foreground">
                     Auto-response untuk pertanyaan customer support
                   </p>
-                  <div className="flex items-center space-x-4 mt-2">
-                    <div className="flex items-center space-x-1 text-sm text-yellow-600">
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-4 mt-2 gap-1 sm:gap-0">
+                    <div className="flex items-center space-x-1 text-xs sm:text-sm text-yellow-600">
                       <AlertTriangle className="h-3 w-3" />
                       <span>Rate limit exceeded</span>
                     </div>
-                    <div className="flex items-center space-x-1 text-sm text-muted-foreground">
+                    <div className="flex items-center space-x-1 text-xs sm:text-sm text-muted-foreground">
                       <Clock className="h-3 w-3" />
                       <span>Last run: 1 hour ago</span>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="flex items-center space-x-2">
-                <Badge variant="secondary" className="bg-yellow-500 text-white">
+              <div className="flex items-center space-x-2 self-start sm:self-auto flex-shrink-0">
+                <Badge
+                  variant="secondary"
+                  className="bg-yellow-500 text-white text-xs"
+                >
                   Warning
                 </Badge>
-                <Button variant="outline" size="sm">
-                  <Play className="h-4 w-4" />
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="h-6 sm:h-8 px-1 sm:px-2"
+                >
+                  <Play className="h-3 w-3 sm:h-4 sm:w-4" />
                 </Button>
-                <Button variant="outline" size="sm">
-                  <Settings className="h-4 w-4" />
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="h-6 sm:h-8 px-1 sm:px-2"
+                >
+                  <Settings className="h-3 w-3 sm:h-4 sm:w-4" />
                 </Button>
               </div>
             </div>
 
-            <div className="flex items-center justify-between p-4 border rounded-lg">
-              <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-indigo-600 rounded-lg flex items-center justify-center">
-                  <Workflow className="h-6 w-6 text-white" />
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between p-3 sm:p-4 border rounded-lg gap-3 sm:gap-0">
+              <div className="flex items-center space-x-3 sm:space-x-4 min-w-0 flex-1">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-indigo-500 to-indigo-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Workflow className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
                 </div>
-                <div>
-                  <h3 className="font-medium">Lead Qualification</h3>
-                  <p className="text-sm text-muted-foreground">
+                <div className="min-w-0 flex-1">
+                  <h3 className="font-medium text-sm sm:text-base">
+                    Lead Qualification
+                  </h3>
+                  <p className="text-xs sm:text-sm text-muted-foreground">
                     Otomatis menilai dan kategorikan lead baru
                   </p>
-                  <div className="flex items-center space-x-4 mt-2">
-                    <div className="flex items-center space-x-1 text-sm text-muted-foreground">
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-4 mt-2 gap-1 sm:gap-0">
+                    <div className="flex items-center space-x-1 text-xs sm:text-sm text-muted-foreground">
                       <CheckCircle className="h-3 w-3 text-green-500" />
                       <span>67 leads processed today</span>
                     </div>
-                    <div className="flex items-center space-x-1 text-sm text-muted-foreground">
+                    <div className="flex items-center space-x-1 text-xs sm:text-sm text-muted-foreground">
                       <Clock className="h-3 w-3" />
                       <span>Last run: 5 min ago</span>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="flex items-center space-x-2">
-                <Badge variant="default" className="bg-green-500 text-white">
+              <div className="flex items-center space-x-2 self-start sm:self-auto flex-shrink-0">
+                <Badge
+                  variant="default"
+                  className="bg-green-500 text-white text-xs"
+                >
                   Running
                 </Badge>
-                <Button variant="outline" size="sm">
-                  <Pause className="h-4 w-4" />
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="h-6 sm:h-8 px-1 sm:px-2"
+                >
+                  <Pause className="h-3 w-3 sm:h-4 sm:w-4" />
                 </Button>
-                <Button variant="outline" size="sm">
-                  <Settings className="h-4 w-4" />
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="h-6 sm:h-8 px-1 sm:px-2"
+                >
+                  <Settings className="h-3 w-3 sm:h-4 sm:w-4" />
                 </Button>
               </div>
             </div>
@@ -385,10 +474,10 @@ export default function AutomationPage() {
         </CardHeader>
         <CardContent>
           <div className="space-y-3">
-            <div className="flex items-center space-x-3 p-3 border rounded-lg">
-              <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-              <div className="flex-1">
-                <p className="text-sm font-medium">
+            <div className="flex items-start space-x-3 p-3 border rounded-lg">
+              <div className="w-2 h-2 bg-green-500 rounded-full flex-shrink-0 mt-2"></div>
+              <div className="flex-1 min-w-0">
+                <p className="text-xs sm:text-sm font-medium">
                   Welcome Email Sequence executed successfully
                 </p>
                 <p className="text-xs text-muted-foreground">
@@ -397,10 +486,10 @@ export default function AutomationPage() {
               </div>
             </div>
 
-            <div className="flex items-center space-x-3 p-3 border rounded-lg">
-              <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-              <div className="flex-1">
-                <p className="text-sm font-medium">
+            <div className="flex items-start space-x-3 p-3 border rounded-lg">
+              <div className="w-2 h-2 bg-green-500 rounded-full flex-shrink-0 mt-2"></div>
+              <div className="flex-1 min-w-0">
+                <p className="text-xs sm:text-sm font-medium">
                   Payment Processing completed
                 </p>
                 <p className="text-xs text-muted-foreground">
@@ -409,10 +498,10 @@ export default function AutomationPage() {
               </div>
             </div>
 
-            <div className="flex items-center space-x-3 p-3 border rounded-lg">
-              <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-              <div className="flex-1">
-                <p className="text-sm font-medium">
+            <div className="flex items-start space-x-3 p-3 border rounded-lg">
+              <div className="w-2 h-2 bg-blue-500 rounded-full flex-shrink-0 mt-2"></div>
+              <div className="flex-1 min-w-0">
+                <p className="text-xs sm:text-sm font-medium">
                   Lead Qualification started
                 </p>
                 <p className="text-xs text-muted-foreground">
@@ -421,10 +510,10 @@ export default function AutomationPage() {
               </div>
             </div>
 
-            <div className="flex items-center space-x-3 p-3 border rounded-lg">
-              <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
-              <div className="flex-1">
-                <p className="text-sm font-medium">
+            <div className="flex items-start space-x-3 p-3 border rounded-lg">
+              <div className="w-2 h-2 bg-yellow-500 rounded-full flex-shrink-0 mt-2"></div>
+              <div className="flex-1 min-w-0">
+                <p className="text-xs sm:text-sm font-medium">
                   Customer Support Automation warning
                 </p>
                 <p className="text-xs text-muted-foreground">

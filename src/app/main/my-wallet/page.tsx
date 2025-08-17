@@ -9,15 +9,17 @@ import { Button } from "@/components/ui/button";
 
 export default function MyWalletPage() {
   return (
-    <div className="space-y-6">
+    <div className="space-y-4 sm:space-y-6">
       <div>
-        <h1 className="text-3xl font-bold tracking-tight">My Wallet</h1>
-        <p className="text-muted-foreground">
+        <h1 className="text-2xl sm:text-3xl font-bold tracking-tight">
+          My Wallet
+        </h1>
+        <p className="text-muted-foreground text-sm sm:text-base">
           Kelola saldo dan transaksi wallet Anda.
         </p>
       </div>
 
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+      <div className="grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
         <Card className="bg-gradient-card hover-lift border-border/50">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">Total Saldo</CardTitle>
@@ -114,8 +116,8 @@ export default function MyWalletPage() {
         </Card>
       </div>
 
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-7">
-        <Card className="bg-gradient-card hover-lift border-border/50 col-span-4">
+      <div className="grid gap-4 sm:gap-6 grid-cols-1 lg:grid-cols-7">
+        <Card className="bg-gradient-card hover-lift border-border/50 lg:col-span-4">
           <CardHeader>
             <CardTitle>Aktivitas Wallet</CardTitle>
             <CardDescription>
@@ -174,7 +176,7 @@ export default function MyWalletPage() {
           </CardContent>
         </Card>
 
-        <div className="col-span-3 space-y-4">
+        <div className="lg:col-span-3 space-y-4">
           <Card className="bg-gradient-card hover-lift border-border/50">
             <CardHeader>
               <CardTitle>Quick Actions</CardTitle>

@@ -20,29 +20,31 @@ export default function Home() {
   return (
     <div className="space-y-6">
       {/* Header */}
-      <div className="flex items-center justify-between">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
-          <h1 className="text-3xl font-bold tracking-tight">Dashboard</h1>
-          <p className="text-muted-foreground">
+          <h1 className="text-2xl sm:text-3xl font-bold tracking-tight">
+            Dashboard
+          </h1>
+          <p className="text-muted-foreground text-sm sm:text-base">
             Selamat datang kembali! Berikut adalah ringkasan aktivitas hari ini.
           </p>
         </div>
-        <div className="flex items-center space-x-2">
-          <Button variant="outline" className="hover-lift">
+        <div className="flex items-center space-x-2 flex-shrink-0">
+          <Button variant="outline" className="hover-lift text-sm">
             Export
           </Button>
-          <Button className="bg-gradient-elegant hover:bg-gradient-elegant/90 hover-lift shadow-lg">
+          <Button className="bg-gradient-elegant hover:bg-gradient-elegant/90 hover-lift shadow-lg text-sm">
             Tambah Transaksi
           </Button>
         </div>
       </div>
 
       {/* Main 2 Column Layout */}
-      <div className="grid gap-6 lg:grid-cols-3">
+      <div className="grid gap-4 sm:gap-6 grid-cols-1 lg:grid-cols-3">
         {/* Left Column - Main Content */}
-        <div className="lg:col-span-2 space-y-6">
+        <div className="lg:col-span-2 space-y-4 sm:space-y-6">
           {/* Metrics Cards */}
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
             <Card className="bg-gradient-card hover-lift border-border/50">
               <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                 <CardTitle className="text-sm font-medium">
@@ -150,89 +152,105 @@ export default function Home() {
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <Table>
-                <TableHeader>
-                  <TableRow>
-                    <TableHead>Payment ID</TableHead>
-                    <TableHead>Name</TableHead>
-                    <TableHead>Total Amount</TableHead>
-                    <TableHead>Payment Period</TableHead>
-                    <TableHead>Status</TableHead>
-                    <TableHead className="text-right">Actions</TableHead>
-                  </TableRow>
-                </TableHeader>
-                <TableBody>
-                  <TableRow>
-                    <TableCell className="font-medium">INV-12345672</TableCell>
-                    <TableCell>
-                      <div className="flex items-center space-x-3">
-                        <div className="w-8 h-8 bg-gradient-to-r from-primary to-primary/80 rounded-full flex items-center justify-center text-primary-foreground font-medium text-xs">
-                          SH
+              <div className="overflow-x-auto">
+                <Table className="mobile-table">
+                  <TableHeader>
+                    <TableRow>
+                      <TableHead className="min-w-[120px]">
+                        Payment ID
+                      </TableHead>
+                      <TableHead className="min-w-[150px]">Name</TableHead>
+                      <TableHead className="min-w-[120px]">
+                        Total Amount
+                      </TableHead>
+                      <TableHead className="min-w-[140px]">
+                        Payment Period
+                      </TableHead>
+                      <TableHead className="min-w-[100px]">Status</TableHead>
+                      <TableHead className="text-right min-w-[80px]">
+                        Actions
+                      </TableHead>
+                    </TableRow>
+                  </TableHeader>
+                  <TableBody>
+                    <TableRow>
+                      <TableCell className="font-medium">
+                        INV-12345672
+                      </TableCell>
+                      <TableCell>
+                        <div className="flex items-center space-x-3">
+                          <div className="w-8 h-8 bg-gradient-to-r from-primary to-primary/80 rounded-full flex items-center justify-center text-primary-foreground font-medium text-xs">
+                            SH
+                          </div>
+                          <span>Samirah Hakim</span>
                         </div>
-                        <span>Samirah Hakim</span>
-                      </div>
-                    </TableCell>
-                    <TableCell>$1,149.00 USD</TableCell>
-                    <TableCell>Jan 10 - Jan 17</TableCell>
-                    <TableCell>
-                      <Badge variant="success">Received</Badge>
-                    </TableCell>
-                    <TableCell className="text-right">
-                      <Button variant="ghost" size="sm">
-                        View
-                      </Button>
-                    </TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell className="font-medium">TXN-987654321</TableCell>
-                    <TableCell>
-                      <div className="flex items-center space-x-3">
-                        <div className="w-8 h-8 bg-gradient-to-r from-chart-3 to-chart-2 rounded-full flex items-center justify-center text-white font-medium text-xs">
-                          JL
+                      </TableCell>
+                      <TableCell>$1,149.00 USD</TableCell>
+                      <TableCell>Jan 10 - Jan 17</TableCell>
+                      <TableCell>
+                        <Badge variant="success">Received</Badge>
+                      </TableCell>
+                      <TableCell className="text-right">
+                        <Button variant="ghost" size="sm">
+                          View
+                        </Button>
+                      </TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">
+                        TXN-987654321
+                      </TableCell>
+                      <TableCell>
+                        <div className="flex items-center space-x-3">
+                          <div className="w-8 h-8 bg-gradient-to-r from-chart-3 to-chart-2 rounded-full flex items-center justify-center text-white font-medium text-xs">
+                            JL
+                          </div>
+                          <span>Jordan Lee</span>
                         </div>
-                        <span>Jordan Lee</span>
-                      </div>
-                    </TableCell>
-                    <TableCell>$2,072.00 USD</TableCell>
-                    <TableCell>Jan 16 - Jan 17</TableCell>
-                    <TableCell>
-                      <Badge variant="warning">Failed</Badge>
-                    </TableCell>
-                    <TableCell className="text-right">
-                      <Button variant="ghost" size="sm">
-                        View
-                      </Button>
-                    </TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell className="font-medium">INV-567890123</TableCell>
-                    <TableCell>
-                      <div className="flex items-center space-x-3">
-                        <div className="w-8 h-8 bg-gradient-to-r from-chart-5 to-destructive rounded-full flex items-center justify-center text-white font-medium text-xs">
-                          AK
+                      </TableCell>
+                      <TableCell>$2,072.00 USD</TableCell>
+                      <TableCell>Jan 16 - Jan 17</TableCell>
+                      <TableCell>
+                        <Badge variant="warning">Failed</Badge>
+                      </TableCell>
+                      <TableCell className="text-right">
+                        <Button variant="ghost" size="sm">
+                          View
+                        </Button>
+                      </TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell className="font-medium">
+                        INV-567890123
+                      </TableCell>
+                      <TableCell>
+                        <div className="flex items-center space-x-3">
+                          <div className="w-8 h-8 bg-gradient-to-r from-chart-5 to-destructive rounded-full flex items-center justify-center text-white font-medium text-xs">
+                            AK
+                          </div>
+                          <span>Alexis Kim</span>
                         </div>
-                        <span>Alexis Kim</span>
-                      </div>
-                    </TableCell>
-                    <TableCell>$977.00 USD</TableCell>
-                    <TableCell>Jan 20 - Jan 29</TableCell>
-                    <TableCell>
-                      <Badge variant="secondary">Processed</Badge>
-                    </TableCell>
-                    <TableCell className="text-right">
-                      <Button variant="ghost" size="sm">
-                        View
-                      </Button>
-                    </TableCell>
-                  </TableRow>
-                </TableBody>
-              </Table>
+                      </TableCell>
+                      <TableCell>$977.00 USD</TableCell>
+                      <TableCell>Jan 20 - Jan 29</TableCell>
+                      <TableCell>
+                        <Badge variant="secondary">Processed</Badge>
+                      </TableCell>
+                      <TableCell className="text-right">
+                        <Button variant="ghost" size="sm">
+                          View
+                        </Button>
+                      </TableCell>
+                    </TableRow>
+                  </TableBody>
+                </Table>
+              </div>
             </CardContent>
           </Card>
         </div>
 
         {/* Right Column - Sidebar */}
-        <div className="space-y-6">
+        <div className="space-y-4 sm:space-y-6">
           {/* Recent Sales */}
           <Card className="bg-gradient-card hover-lift border-border/50">
             <CardHeader>

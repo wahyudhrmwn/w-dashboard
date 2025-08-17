@@ -47,6 +47,7 @@ import {
   SidebarMenuSubItem,
   useSidebar,
 } from "@/components/ui/sidebar";
+import { useIsMobile } from "@/hooks/use-mobile";
 import {
   Collapsible,
   CollapsibleContent,
@@ -92,8 +93,9 @@ const platformItems = [
 ];
 
 export function AppSidebar() {
-  // const { state } = useSidebar();
+  const { setOpenMobile } = useSidebar();
   const pathname = usePathname();
+  const isMobile = useIsMobile();
 
   // Daftar semua route yang valid (termasuk yang akan dibuat)
   const validRoutes = React.useMemo(() => {
@@ -193,6 +195,13 @@ export function AppSidebar() {
     return pathname === href && validRoutes.has(href);
   };
 
+  // Fungsi untuk menutup sidebar mobile saat link diklik
+  const handleLinkClick = () => {
+    if (isMobile) {
+      setOpenMobile(false);
+    }
+  };
+
   return (
     <Sidebar className="border-r bg-gradient-sidebar">
       <SidebarHeader className="border-b px-6 py-4">
@@ -263,6 +272,7 @@ export function AppSidebar() {
                                     subItem.href ||
                                     `/${subItem.title.toLowerCase()}`
                                   }
+                                  onClick={handleLinkClick}
                                 >
                                   <subItem.icon className="size-4" />
                                   <span>{subItem.title}</span>
@@ -282,7 +292,10 @@ export function AppSidebar() {
                           "bg-primary/10 text-primary font-medium border-l-2 border-primary shadow-sm"
                       )}
                     >
-                      <Link href={item.href || `/${item.title.toLowerCase()}`}>
+                      <Link
+                        href={item.href || `/${item.title.toLowerCase()}`}
+                        onClick={handleLinkClick}
+                      >
                         <item.icon className="size-4" />
                         <span>{item.title}</span>
                         <ChevronRight className="ml-auto size-4" />
