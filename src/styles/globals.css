@@ -185,6 +185,27 @@
       padding: 0.75rem 1rem;
     }
 
+    /* Sticky header enhancements */
+    .mobile-sticky-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(0, 0, 0, 0.95);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .mobile-sticky-header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: inherit;
+      z-index: -1;
+    }
+
     /* Better mobile card spacing */
     .mobile-card-grid {
       grid-template-columns: 1fr;
@@ -878,6 +899,45 @@
       }
       50% {
         opacity: 0.8;
+      }
+    }
+
+    /* Enhanced sticky header for all screen sizes */
+    .sticky-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: hsl(var(--background) / 0.95);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border-bottom: 1px solid hsl(var(--border) / 0.4);
+    }
+
+    /* Ensure proper stacking context */
+    .sticky-header::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: inherit;
+      z-index: -1;
+    }
+
+    /* Mobile-specific sticky enhancements */
+    .mobile-sticky-enhanced {
+      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1),
+        0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    }
+
+    /* Smooth transitions for sticky state */
+    .sticky-transition {
+      transition: all 0.2s ease-in-out;
+    }
+
+    /* iOS Safari specific fixes */
+    @supports (-webkit-touch-callout: none) {
+      .sticky-header {
+        position: -webkit-sticky;
+        position: sticky;
       }
     }
   }
